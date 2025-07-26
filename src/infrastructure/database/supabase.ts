@@ -29,6 +29,32 @@ export type Database = {
                     created_at?: string;
                 };
             };
+            palabras: {
+                Row: {
+                    id: number;
+                    palabra: string;
+                    nombre: string;
+                    codigo_iso: string;
+                    region: string;
+                    descripcion: string;
+                    created_at?: string;
+                };
+                Insert: {
+                    palabra: string;
+                    nombre: string;
+                    codigo_iso: string;
+                    region: string;
+                    descripcion: string;
+                    created_at?: string;
+                };
+                Update: {
+                    nombre: string;
+                    codigo_iso: string;
+                    region: string;
+                    descripcion: string;
+                    created_at?: string;
+                };
+            }
         };
     };
 };

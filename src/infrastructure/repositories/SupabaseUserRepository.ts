@@ -1,5 +1,5 @@
-import { CreateUserRequest, User } from '../../domain/entities/User';
-import { UserRepository } from '../../domain/repositories/UserRepository';
+import { CreateUserRequest, User } from '@/domain/entities/User';
+import { UserRepository } from '@/domain/repositories/UserRepository';
 import { supabase } from '../database/supabase';
 
 export class SupabaseUserRepository implements UserRepository {

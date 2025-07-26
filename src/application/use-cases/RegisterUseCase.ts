@@ -1,6 +1,6 @@
+import { CreateUserRequest, User } from '@/domain/entities/User';
+import { UserRepository } from '@/domain/repositories/UserRepository';
 import bcrypt from 'bcryptjs';
-import { CreateUserRequest, User } from '../../domain/entities/User';
-import { UserRepository } from '../../domain/repositories/UserRepository';
 
 export class RegisterUseCase {
     constructor(private userRepository: UserRepository) { }

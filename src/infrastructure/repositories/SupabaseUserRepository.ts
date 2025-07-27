@@ -18,6 +18,12 @@ export class SupabaseUserRepository implements UserRepository {
             username: data.username,
             email: data.email,
             password: data.password,
+            first_name: data.firt_name,
+            last_name: data.last_Name,
+            avatarUrl: data.avatarUrl,
+            bio: data.bio,
+            email_verified: data.email_verified,
+            is_active: data.is_active,
             createdAt: new Date(data.created_at)
         };
     }
@@ -36,6 +42,12 @@ export class SupabaseUserRepository implements UserRepository {
             username: data.username,
             email: data.email,
             password: data.password,
+            first_name: data.firt_name,
+            last_name: data.last_Name,
+            avatarUrl: data.avatarUrl,
+            bio: data.bio,
+            email_verified: data.email_verified,
+            is_active: data.is_active,
             createdAt: new Date(data.created_at)
         };
     }
@@ -54,6 +66,12 @@ export class SupabaseUserRepository implements UserRepository {
             username: data.username,
             email: data.email,
             password: data.password,
+            first_name: data.firt_Name,
+            last_name: data.lastName,
+            avatarUrl: data.avatarUrl,
+            bio: data.bio,
+            email_verified: data.email_verified,
+            is_active: data.is_active,
             createdAt: new Date(data.created_at)
         };
     }
@@ -64,6 +82,8 @@ export class SupabaseUserRepository implements UserRepository {
             .insert({
                 username: userData.username,
                 email: userData.email,
+                firt_name: userData.first_name,
+                last_name: userData.last_name,
                 password: userData.password
             })
             .select()
@@ -78,6 +98,8 @@ export class SupabaseUserRepository implements UserRepository {
             username: data.username,
             email: data.email,
             password: data.password,
+            first_name: data.firt_name,
+            last_name: data.last_name,
             createdAt: new Date(data.created_at)
         };
     }
@@ -105,6 +127,11 @@ export class SupabaseUserRepository implements UserRepository {
             username: data.username,
             email: data.email,
             password: data.password,
+            first_name: data.firt_name,
+            last_name: data.last_name,
+            avatarUrl: data.avatarUrl,
+            bio: data.bio,
+            email_verified: data.email_verified,
             createdAt: new Date(data.created_at)
         };
     }

@@ -1,4 +1,4 @@
-import { CreatePalabraRequest, Palabra, UpdatePalabraRequest } from "../entities/Palabra";
+import { CreatePalabraRequest, Palabra, UpdatePalabraRequest } from "@domain/entities/Palabra";
 
 export interface PalabraRepository {
     findById(id: number): Promise<Palabra | null>;

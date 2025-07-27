@@ -1,14 +1,14 @@
 'use client';
 
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { Button } from '../../components/ui/button';
-import { Input } from '../../components/ui/input';
-import { Label } from '../../components/ui/label';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../components/ui/card';
-import { Alert, AlertDescription } from '../../components/ui/alert';
+import { Alert, AlertDescription } from '@components/ui/alert';
+import { Button } from '@components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@components/ui/card';
+import { Input } from '@components/ui/input';
+import { Label } from '@components/ui/label';
 import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
 import { LogIn, User } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 export default function LoginPage() {
     const [username, setUsername] = useState('');
@@ -118,8 +118,8 @@ export default function LoginPage() {
 
                         <div className="text-center text-sm">
                             <span className="text-forest-green/70">¿No tienes cuenta? </span>
-                            <Button 
-                                variant="link" 
+                            <Button
+                                variant="link"
                                 className="p-0 h-auto"
                                 onClick={() => router.push('/register')}
                                 type="button"

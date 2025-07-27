@@ -14,18 +14,31 @@ export type Database = {
                     username: string;
                     email: string;
                     password: string;
+                    firtName: string;
+                    lastName: string;
+                    avatarUrl?: string;
+                    bio?: string;
+                    email_verified: boolean;
+                    is_active?: boolean;
                     created_at: string;
                 };
                 Insert: {
                     username: string;
                     email: string;
                     password: string;
+                    firtName: string;
+                    lastName: string;
+                    avatarUrl?: string;
+                    bio?: string;
+                    email_verified?: boolean;
                     created_at?: string;
                 };
                 Update: {
                     username?: string;
                     email?: string;
                     password?: string;
+                    firtName?: string;
+                    lastName?: string;
                     created_at?: string;
                 };
             };

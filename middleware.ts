@@ -13,7 +13,7 @@ export function middleware(request: NextRequest) {
         }
 
         try {
-            jwt.verify(token, process.env.JWT_SECRET || 'your-secret-key');
+            jwt.verify(token, process.env.JWT_SECRET!);
             return NextResponse.next();
         } catch (error) {
             return NextResponse.redirect(new URL('/login', request.url));

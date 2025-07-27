@@ -1,4 +1,4 @@
-import { CreateUserRequest, LoginRequest, User } from '../entities/User';
+import { CreateUserRequest, LoginRequest, User } from '@domain/entities/User';
 
 export interface UserRepository {
     findByUsername(username: string): Promise<User | null>;

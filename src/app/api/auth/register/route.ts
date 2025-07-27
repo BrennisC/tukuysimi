@@ -1,10 +1,10 @@
+import { RegisterUseCase } from '@/application/use-cases/RegisterUseCase';
+import { SupabaseUserRepository } from '@/infrastructure/repositories/SupabaseUserRepository';
 import { NextRequest, NextResponse } from 'next/server';
-import { RegisterUseCase } from '../../../../application/use-cases/RegisterUseCase';
-import { SupabaseUserRepository } from '../../../../infrastructure/repositories/SupabaseUserRepository';
 
 export async function POST(request: NextRequest) {
     try {
-        const { username, email, password } = await request.json();
+        const { username, email, first_name, last_name, password } = await request.json();
 
         if (!username || !email || !password) {
             return NextResponse.json(
@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
         const registerUseCase = new RegisterUseCase(userRepository);
 
         // Ejecutar caso de uso
-        const result = await registerUseCase.execute({ username, email, password });
+        const result = await registerUseCase.execute({ first_name, last_name, username, email, password });
 
         if (!result.success) {
             return NextResponse.json(result, { status: 400 });
